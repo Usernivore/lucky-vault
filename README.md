@@ -15,5 +15,3 @@ A personal PWA Dashboard to track giveaways, sweepstakes, and contests. Features
 - **Persistence**: Browser LocalStorage
 - **Icons**: Lucide React
 
-### 👤 Author
-**Alonso**
