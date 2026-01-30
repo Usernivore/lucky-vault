@@ -1,0 +1,355 @@
+:root {
+    --bg-color: #F8F9FB;
+    --card-bg: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #71717A;
+    --accent-blue: #3B82F6;
+    --accent-green: #10B981;
+    --accent-orange: #F59E0B;
+    --accent-purple: #8B5CF6;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    --border-radius: 24px;
+    --font-family: 'Outfit', sans-serif;
+}
+
+[data-lucide] {
+    stroke-width: 1.5px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.5;
+    padding-bottom: 40px;
+}
+
+#app {
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header */
+.header {
+    padding: 32px 24px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #A1A1AA;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-btn {
+    background: white;
+    border: 1px solid #F1F1F1;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #FFE4E6;
+    border: 2px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero Card */
+.container {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hero-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.hero-image-wrapper {
+    position: relative;
+    height: 240px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-live {
+    position: absolute;
+    top: 100px;
+    /* Adjusted to look like the image */
+    left: 20px;
+    background: #007AFF;
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+}
+
+.timer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 6px 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+.timer-dot {
+    width: 6px;
+    height: 6px;
+    background: #FF4B55;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #FF4B55;
+}
+
+.hero-content {
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    margin-top: -80px;
+    position: relative;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.stat-card.dark {
+    background: #000000;
+    color: white;
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box.blue {
+    background: #F0F7FF;
+    color: #3B82F6;
+}
+
+.icon-box.light-blue {
+    background: #EFF6FF;
+    color: #3B82F6;
+}
+
+.icon-box.orange {
+    background: #FFF7ED;
+    color: #F59E0B;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #A1A1AA;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dark .stat-label {
+    color: #71717A;
+}
+
+.plus-icon {
+    width: 54px;
+    height: 54px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.corner-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+}
+
+/* Activity Section */
+.activity-section {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.more-btn {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    color: #A1A1AA;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.activity-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-icon.green {
+    background: #F0FDF4;
+    color: #10B981;
+}
+
+.activity-icon.light-blue {
+    background: #F0F9FF;
+    color: #0EA5E9;
+}
+
+.activity-info {
+    flex: 1;
+}
+
+.activity-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.activity-meta {
+    font-size: 12px;
+    color: #A1A1AA;
+    margin-top: 2px;
+}
+
+.activity-tag {
+    font-size: 10px;
+    font-weight: 800;
+    color: #CBD5E1;
+    text-transform: uppercase;
+}
+
+/* Micro-animations */
+.stat-card:hover,
+.hero-card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+}
+
+.icon-btn:active {
+    transform: scale(0.95);
+}
